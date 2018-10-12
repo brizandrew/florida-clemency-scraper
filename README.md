@@ -22,7 +22,7 @@ Make your your csv file has the following fields in it:
 - `LAST_NAME`,
 - `DATE_OF_BIRTH`
 
-It can have more than these fields, but they will not be copied over. DATE_OF_BIRTH can be in any javascript parseable format. It will be reformatted to work on the website in the code.
+It can have more than these fields which will be transferred over to the output. DATE_OF_BIRTH can be in any javascript parseable format. It will be reformatted to work on the website in the code.
 
 
 Run the following script substituting the placeholder with the path to your file.
