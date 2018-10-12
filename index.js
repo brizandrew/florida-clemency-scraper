@@ -21,10 +21,7 @@ const DATA = {
   STATUS: '#Label14',
 };
 
-const OUTPUTS = [
-  'FIRST_NAME',
-  'LAST_NAME',
-  'DATE_OF_BIRTH',
+const ADDITIONAL_OUTPUTS = [
   'CLEMENCY_RECORD_FOUND',
   'CLEMENCY_NAME',
   'CLEMENCY_DOB',
@@ -88,7 +85,7 @@ async function run () {
       }
     }
 
-    const opts = { fields: OUTPUTS };
+    const opts = { fields: Object.keys(jsonArray[0]).concat(ADDITIONAL_OUTPUTS) };
     const csv = jsonToCsv(jsonArray, opts);
     console.log('Saving to csv file: output.csv');
     fs.writeFile('output.csv', csv);
